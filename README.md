@@ -1,2 +1,2 @@
 <p>Icons from <a href="https://devicon.dev/">devicon</a> and <a href="https://materialdesignicons.com/">MAterial design</a></p>
-<p>Images from </p>
+<p>Images from Vitaly Gariev: https://www.pexels.com/ru-ru/photo/30535627/</p>
