@@ -13,6 +13,11 @@
 		sans-serif;
 }
 
+img[src$=".svg"] {
+	width: 24px;
+	height: 24px;
+}
+
 html,
 body {
 	max-width: 100%;
@@ -21,21 +26,37 @@ body {
 
 body {
 	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 header {
 	position: relative;
 	padding-top: 3rem;
+	flex: 1;
 }
 main {
-	background-color: white;
 	position: relative;
 	z-index: 1;
 	padding: 0 1.5rem;
+	margin-bottom: 1.5rem;
+	flex: 2;
 }
 footer {
 	background-color: #0891b2;
 	padding: 1.5rem;
 	color: white;
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	> * {
+		flex: 1;
+	}
+	.links img {
+		width: 30px;
+		height: 30px;
+	}
 }
 
 .turned {
@@ -45,10 +66,6 @@ footer {
 	background-color: #0891b2;
 	transform-origin: bottom;
 	transform: rotate(355deg) translate(0, -80%);
-}
-
-.person {
-	max-width: clamp(220px, 30vw, 350px);
 }
 
 .links {
@@ -87,6 +104,16 @@ footer {
 	}
 }
 
+.project {
+	background-position: center;
+	background-size: cover;
+	height: 12rem;
+}
+
+.no1{
+	background-image: url(./assets/img/pexels-silverkblack-30535621.jpg);
+}
+
 .about {
 	flex: 3;
 	margin: 2.7rem 0;
@@ -111,4 +138,47 @@ h3 {
 header p,
 main p {
 	color: #5a5858;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 1.5rem;
+}
+
+.card {
+	margin: 0 auto;
+	width: 300px;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.157);
+	p {
+		margin: 0 1rem 1rem 1rem;
+	}
+}
+
+.projectName{
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	>* {
+		margin: 0;
+	} 
+	img {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.contactInfo {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	> * {
+		margin: 0;
+	}
+}
+
+.person {
+	object-fit: cover;
+	object-position: center;
+	max-width: 60%;
 }
